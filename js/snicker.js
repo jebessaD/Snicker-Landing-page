@@ -1,23 +1,17 @@
-"strict"
-class user{
-    constructor(name,age,email){
-        this.userName =name;
-        this.age=age;
-        this.email=email;
-    }
-    returnEmail(){
-        return this.email;
-    }
-    static file(){
-        console.log("static do not need to instantiated");
-    }
-    sayhello(){
-        console.log("hello " + this.userName);
-    }
-
+const btn=document.querySelector(".dark");
+const html=document.querySelector("html");
+const p=document.querySelector(".price");
+var dark = false;
+btn.addEventListener("click",(e)=>{
+    
+if (dark===false){
+    html.style.background ="rgb(54, 54, 54)";
+    html.style.color = "white"
+    p.style.color = "white"
+    dark =true;
+}else{
+        html.style.background ="white"
+        html.style.color = "black"
+        dark =false;    
 }
-let person = new user("jaba","21","jaba@gmail.com")
-person.sayhello()
-let email=person.returnEmail()
-console.log(email);
-user.file();
+})
