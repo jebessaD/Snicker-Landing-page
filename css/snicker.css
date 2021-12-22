@@ -1,0 +1,411 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.container {
+    margin-left: 55px;
+    /* margin-right: 115px; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container nav{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: rgba(97, 73, 73, 0.274) solid 0.1px;  
+}
+.container nav #branding-name{
+    flex: 1 ;
+}
+
+.container nav .navbar{
+    flex: 4;
+}
+
+.container nav .profile{
+    flex: 1;
+    height: 80px;
+    display: flex;
+    /* position: relative; */
+
+}
+.container nav .profile .cart{
+    padding-top: 27px;
+    flex: 1;
+    /* border: rgb(190, 148, 84) solid; */
+}
+.container nav .profile .dark{
+    position: relative;
+    padding-top: 27px;
+    flex: 1;
+    left: 18px;
+}
+.container nav .profile .image{
+    flex: 1;
+    padding-top: 20px;
+    
+}
+.container nav .profile i {
+    color: rgb(104, 104, 104);
+}
+.container nav a:hover i{
+    color: rgb(68, 68, 68);
+}
+
+.container nav .profile img{
+    object-fit: cover; 
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+}
+.container nav .profile .cart{
+    margin-top: 0px;
+}
+
+
+nav ul{
+    list-style: none;
+    padding: 0px;
+    cursor: pointer;
+}
+nav li{
+   
+    display: inline;
+    padding-right:19px ;
+
+}
+nav li a{
+    position: relative;
+    padding: 5px 0px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color:rgb(134, 134, 134);
+    font-size: 12px;  
+
+} 
+nav ul li a::before,
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(124, 124, 124);
+    left: 0;
+    transform: scaleX(0);
+    transition: all 1s;
+}
+
+nav ul li a::before{
+    top:0px;  
+    transform-origin: right;
+}
+nav ul li a::after{
+    bottom:0;
+    transform-origin: left;
+
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+    transform: scaleX(1);
+    
+}
+nav ul li a:hover{
+    color: rgb(236, 141, 15);
+}
+
+nav #branding-name h2{
+    margin-top: 10px;
+    text-transform: lowercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.container section{
+    margin-top: 100px;
+    display: flex;
+    /* border: salmon solid; */
+}
+.container section .leftcontainer{
+    flex: 1;
+    display: flex;
+    /* border: solid; */
+    flex-direction: column;
+
+}
+.container section .rightcontainer{
+    flex: 1;
+    /* border: solid; */
+}
+
+.container section .leftcontainer .leftcontainer-upper{
+    flex:7;
+    /* background-color: #6f8699; */
+    align-self:center ;
+    margin: 10px;
+}
+.container section .leftcontainer .leftcontainer-upper img{
+    height: 320px;
+    width: 320px;
+    /* margin-left: 70px; */
+    object-fit:cover;
+    border-radius: 20px;
+    object-position: -45px 0px;
+    box-shadow: rgb(39, 39, 39) 5px 5px 20px;
+    position: relative;   
+}
+
+.container section .leftcontainer .leftcontainer-bottom{
+    flex:1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.container section .leftcontainer .leftcontainer-bottom img{
+    height: 80px;
+    width:80px;
+    object-fit: cover;
+    margin-right: 10px;
+    /* width: 100%; */
+    border-radius: 10px;
+    object-position: -10px 0px;
+    box-shadow: rgb(39, 39, 39) 2px 2px 5px;
+}
+.leftcontainer-bottom a:focus img{
+    border: rgb(241, 117, 14) solid;
+  
+}
+
+.container section .rightcontainer{
+    margin: 20px;
+    padding: 25px;
+}
+.container section .rightcontainer h6{
+    color: rgb(241, 117, 14);
+    margin-bottom: 5px;
+}
+.container section .rightcontainer h1{
+    font-size: 30px;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+.container section .rightcontainer p{
+    font-size:13px;
+}
+.container section .rightcontainer .price {
+    display:flex;
+    /* background-color: tomato; */
+}
+.container section .rightcontainer .price p{
+    margin-left: 10px;
+    margin-top: 20px;
+    /* padding-bottom: 25px; */
+    padding: 5px 1px 0px 3px;
+    margin-bottom: 5px;
+    background-color: rgb(252, 237, 209);
+    border-radius: 5px;
+    color: rgb(236, 141, 15);
+}
+.container section .rightcontainer .price h2{
+    /* margin-left: 10px; */
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.container section .rightcontainer p{
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    color: rgb(112, 112, 112);
+}
+.container section .rightcontainer .oldPrice{
+    text-decoration: line-through;
+    margin-bottom: 20px;
+}
+.container section .rightcontainer button{
+    width: 180px;
+    height: 35px;
+    background-color:rgb(236, 141, 15);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.container section .rightcontainer button span{
+    word-spacing: 10px;
+}
+.container section .rightcontainer button:hover{
+    background-color:rgba(236, 140, 15, 0.808);
+    transform: scale(1.006);
+}
+/* .container section .rightcontainer button:focus{
+    background-color:rgba(146, 89, 14, 0.932); 
+ } */
+hr{
+    margin: 40px;
+}
+footer{
+    height: minmax(300px,auto);
+    background-color: rgb(31, 31, 31);
+    margin: -8px;
+    margin-top: 30px;
+    padding: 20px 40px 0px 40px;
+    color: white;
+    display: block;
+}
+footer .upper{
+    display: flex;
+}
+footer .upper p{
+    padding-top: 20px;
+    color: rgb(158, 158, 158);
+    line-height: 22px;
+
+}
+footer .upper div{
+    margin: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+
+footer .name{
+    flex: 3;
+}
+footer .contact{
+
+    display: block;
+    flex: 1;
+}
+footer .contact a{
+    padding-top: 20px;
+    line-height: 5px;
+    display: block;
+    text-decoration: none;
+    color: rgb(158, 158, 158)
+}
+footer .contact a i{
+    margin-right: 15px;
+    font-size: 12px;
+}
+footer .contact a:hover{
+    color: rgb(204, 204, 204)
+}
+footer .news-feed{
+    flex: 1;
+}
+
+footer input[type="submit"]{
+    background-color: rgb(236, 141, 15);
+    height: 35px;
+    width: 200px;
+    font-size: 17px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    outline-style: none;
+    letter-spacing: 0.7px;
+}
+footer input[type="submit"]:hover{
+    background-color: rgb(240, 157, 48);
+}
+
+footer input[type="email"]:hover{
+    width: 181px;
+    border-right: rgb(240, 157, 48) solid 2px;
+}
+footer input[type="email"]:focus{
+    width: 181px;
+    border-right: rgb(70, 240, 48) solid 2px; 
+}
+
+footer input[type="email"]{
+    background-color: rgb(31, 31, 31);
+    height: 35px;
+    width: 183px;
+    padding-left: 16px;
+    font-size: 17px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    outline-style: none;
+    letter-spacing: 0.7px;
+    border: gray solid 1px;
+}
+footer ::placeholder{
+    color: rgb(165, 165, 165);
+}
+footer form{
+    position: relative;
+}
+footer label{
+    position: absolute;
+    padding: 5px;
+    font-size: 20px;
+    left: 9px;
+    top: 12px;
+    color: gray;
+
+}
+.form-input:focus + .form-label{
+    position:absolute;
+    font-size: small;
+    left: 15px;
+    top: 2px;
+    padding: 0px 5px;
+    color:rgb(158, 158, 158);
+    background-color: rgb(31, 31, 31);
+    transition: .3s;
+}
+footer .bottom{
+    margin-bottom: -20px;
+    text-align: center;
+}
+footer .bottom p{
+    font-size: 17px;
+    padding-bottom: 40px;
+    color: rgb(158, 158, 158);
+    padding-top: 30px;
+    border-top:gray solid 0.1px;
+}
+
+@media(max-width:760px){
+    /* footer .upper{
+        flex-direction: column;
+    } */
+    .container section{
+        flex-direction: column;
+    }
+    .container nav #branding-name{
+        flex: 1 ;
+    }
+    
+    .container nav .navbar{
+        flex: 4;
+        order: 3;
+        flex-basis:100%;
+    }
+    
+    .container nav .profile{
+        flex: 1;
+        height: 70px;
+        display: flex;
+        /* border: steelblue solid; */
+    }
+    .container nav .profile .cart{
+        padding-top: 27px;
+        padding-left:115px;
+        flex: 1;
+        /* border: rgb(190, 148, 84) solid; */
+    }
+    .container nav .profile .image{
+        flex: 1;
+        padding-top: 20px;
+    }
+    footer .upper{
+        display:inline;
+        
+    }
+    /* .container section .leftcontainer .leftcontainer-bottom{
+        
+    } */
+}
